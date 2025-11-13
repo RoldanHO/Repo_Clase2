@@ -1,0 +1,93 @@
+header {
+    display: flex;                  /* Flexbox para alinear elementos */
+    flex-direction: column;         /* Apila elementos verticalmente (banner + menú) */
+    justify-content: center;        /* Centra verticalmente (útil si hay altura fija) */
+    align-items: center;            /* Centra horizontalmente */
+    
+    width: 90%;                     /* Ocupa el 90% del ancho total */
+    max-width: 1000px;              /* Evita que se expanda demasiado en pantallas grandes */
+    margin: 20px auto;              /* Centra el bloque entero */
+    padding: 10px;
+    
+    background-color: #fff;         /* Fondo blanco */
+    text-align: center;             /* Centra texto o elementos inline */
+}
+
+header a img {
+    display: block;                 /* Evita espacios debajo de la imagen */
+    margin: 0 auto;                 /* Centra horizontalmente */
+    width: 100%;                    /* La imagen ocupa todo el ancho del header */
+    max-width: 900px;               /* Limita su tamaño máximo */
+    height: auto;                   /* Mantiene proporción */
+    border-radius: 10px;            /* Bordes redondeados (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* === Adaptación a móviles === */
+@media (max-width: 600px) {
+    header {
+        width: 95%;
+        padding: 5px;
+    }
+
+    header a img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+}
+
+body {
+    background-color: #ffffff; /* fondo blanco */
+    color: #000000; /* texto negro */
+    font-family: Arial, Helvetica, sans-serif; /* tipografías limpias */
+    margin: 0; /* elimina márgenes por defecto del navegador */
+    padding: 0; /* agrega espacios para alejar de los bordes*/
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+main {
+    width: 80%;              /* el contenido ocupa el 80% del ancho de la pantalla */
+    margin: 0 auto;          /* centra horizontalmente el bloque */
+    padding: 20px;           /* agrega espacio interno */
+    text-align: center;      /* centra el texto dentro del main */
+} 
+
+article {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center; /* centra el contenido textual */
+}
+
+article img {
+    display: block;     /* la imagen pasa a ser bloque */
+    margin: 10px auto;  /* la centra horizontalmente */
+    max-width: 100%;    /* se adapta al ancho del contenedor */
+    height: auto;       /* mantiene proporciones */
+    border-radius: 10px; /* opcional, esquinas redondeadas */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* opcional, color de fondo */
+    color: white; /* color del texto */
+}
+
