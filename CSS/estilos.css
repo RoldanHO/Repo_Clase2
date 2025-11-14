@@ -84,6 +84,60 @@ article img {
     border-radius: 10px; /* opcional, esquinas redondeadas */
 }
 
+table {
+    margin: 0 auto;
+    border-spacing: 15px;
+}
+
+table img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Contenedor general del bloque de video */
+.video-container {
+    width: 100%;
+    max-width: 800px;      /* ancho máximo del video */
+    margin: 40px auto;     /* centra horizontalmente y agrega espacio */
+    text-align: center;    /* centra el título */
+}
+
+/* Título del video */
+.video-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Contenedor responsivo del iframe */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;   /* proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;      /* opcional */
+}
+
+/* Iframe responsivo */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -91,3 +145,44 @@ footer {
     color: white; /* color del texto */
 }
 
+/* Botón flotante "Volver arriba" */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #333;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.btn-top:hover {
+    background: #555;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.btn-whatsapp img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.btn-whatsapp:hover img {
+    transform: scale(1.1);
+}
